@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('C:/Users/Ameya/OneDrive/Desktop/side projects/WP/wallpaperflare.com_wallpaper.jpg'); /* Path to your image */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #665151;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+}
+
+header, section, footer {
+    color:blanchedalmond;
+    margin: auto;
+    width: 50%;
+    border-color: azure;
+}
+
+h1 {
+    color:blanchedalmond;
+    margin: 0; /* Remove default margin */
+    border-color: azure;
+}
+
+footer {
+    color: cyan;
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+    background-color: #180a0a; /* Optional: Background color for better visibility */
+    border-color: black;
+}
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-buttons a {
+    margin: 0 10px; /* Adjust spacing between buttons */
+    text-decoration: none;
+    color: #fff; /* Set the color for button text */
+}
+
+.footer-buttons a img {
+    width: 30px; /* Adjust icon size as needed */
+    height: 30px;
+}
+
