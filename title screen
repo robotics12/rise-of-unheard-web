@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Ready?</title>
+    <link rel="stylesheet" href="webpage design.css">
+    <style>
+        /* Your existing CSS styles here */
+
+        /* Animation */
+        body.falling {
+            animation: crackAnimation 2s forwards;
+        }
+
+        body:not(.falling) {
+            opacity: 1;
+            transition: opacity 2s;
+        }
+
+        body.falling {
+            opacity: 0;
+        }
+
+        @keyframes crackAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+    <script>
+        function redirectToMainPage() {
+            document.body.classList.add('falling');
+            setTimeout(function () {
+                window.location.href = 'begining.html';
+            }, 2000); // Adjust the delay (in milliseconds) to match the duration of your animation
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Are You Ready?</h1>
+    </header>
+    
+    <section>
+        <p>Get ready for the next chapter in the Rise of Unheard journey.</p>
+        <button onclick="redirectToMainPage()">Join Now</button>
+    </section>
+    
+    <footer>
+        <p>&copy;2024 Rise of Unheard.</p>
+        <div class="footer-buttons">
+            <a href="https://discord.gg/zMtwkyAf" target="_blank"><img src="discord.png" alt="Discord"></a>
+            <a href="https://www.youtube.com/@riseofunheard" target="_blank"><img src="youtube.jpg" alt="YouTube"></a>
+            <a href="https://www.instagram.com/riseofunheard/" target="_blank"><img src="instagram.jpg" alt="Instagram"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
