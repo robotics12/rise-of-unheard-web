@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('bleach.jpg'); /* Path to your image */
+    background-image: url('bleach.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -11,29 +11,31 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+    min-height: 100vh;
 }
 
 header, section, footer {
-    color:blanchedalmond;
+    color: blanchedalmond;
     margin: auto;
     width: 50%;
     border-color: azure;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust background color and transparency as needed */
 }
 
 h1 {
-    color:blanchedalmond;
-    margin: 0; /* Remove default margin */
+    color: blanchedalmond;
+    margin: 0;
     border-color: azure;
 }
 
 footer {
     color: cyan;
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto;
     width: 100%;
-    background-color: #180a0a; /* Optional: Background color for better visibility */
+    background-color: #180a0a;
     border-color: black;
 }
+
 .footer-buttons {
     display: flex;
     justify-content: center;
@@ -41,13 +43,26 @@ footer {
 }
 
 .footer-buttons a {
-    margin: 0 10px; /* Adjust spacing between buttons */
+    margin: 0 10px;
     text-decoration: none;
-    color: #fff; /* Set the color for button text */
+    color: #fff;
 }
 
 .footer-buttons a img {
-    width: 30px; /* Adjust icon size as needed */
+    width: 30px;
     height: 30px;
 }
 
+/* Animation */
+body.falling {
+    animation: crackAnimation 2s forwards;
+}
+
+body:not(.falling) {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+body.falling {
+    opacity: 0;
+}
