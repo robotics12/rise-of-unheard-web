@@ -5,38 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Are You Ready?</title>
     <link rel="stylesheet" href="webpage design.css">
-    <style>
-        /* Your existing CSS styles here */
-
-        /* Animation */
-        body.falling {
-            animation: crackAnimation 2s forwards;
-        }
-
-        body:not(.falling) {
-            opacity: 1;
-            transition: opacity 2s;
-        }
-
-        body.falling {
-            opacity: 0;
-        }
-
-        @keyframes crackAnimation {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(100vh);
-            }
-        }
-    </style>
+    
     <script>
-        function redirectToMainPage() {
-            document.body.classList.add('falling');
+        function redirectToNextPage() {
+            document.body.classList.add('falling'); // Add class for exit animation
             setTimeout(function () {
-                window.location.href = 'begining.html';
-            }, 2000); // Adjust the delay (in milliseconds) to match the duration of your animation
+                window.location.href = 'index.html'; // Redirect after exit animation
+            }, 1000); // Adjust the delay to match the duration of your exit animation
         }
     </script>
 </head>
@@ -49,7 +24,7 @@
     
     <section>
         <p>Get ready for the next chapter in the Rise of Unheard journey.</p>
-        <button onclick="redirectToMainPage()">Join Now</button>
+        <button onclick="redirectToNextPage()">Join Now</button>
     </section>
     
     <footer>
