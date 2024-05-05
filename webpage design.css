@@ -32,7 +32,7 @@ footer {
     color: cyan;
     margin-top: auto;
     width: 100%;
-    background-color: #180a0a;
+    background-color: #00000000;
     border-color: black;
 }
 
@@ -53,16 +53,18 @@ footer {
     height: 30px;
 }
 
-/* Animation */
-body.falling {
-    animation: crackAnimation 2s forwards;
+
+
+/* Add this CSS to apply the falling animation */
+.falling {
+    animation: fallOffScreen 1s forwards;
 }
 
-body:not(.falling) {
-    opacity: 1;
-    transition: opacity 2s;
-}
-
-body.falling {
-    opacity: 0;
+@keyframes fallOffScreen {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh); /* Move the page down by the height of the viewport */
+    }
 }
